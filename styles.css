@@ -1,0 +1,423 @@
+/* Variabel untuk Mode Terang dan Gelap
+:root {
+    --bg-light: #ffffff; /* Warna background terang */
+    --bg-dark: #121212; /* Warna background gelap */
+    --gradient-light: linear-gradient(135deg, #ffffff, #f0f4f8); /* Gradasi background terang */
+    --gradient-dark: linear-gradient(135deg, #333333, #1d1d1d); /* Gradasi background gelap */
+    --text-color-light: #333333; /* Teks untuk mode terang */
+    --text-color-dark: #f4f4f4; /* Teks untuk mode gelap */
+    --btn-bg-color-light: #4CAF50; /* Background tombol terang */
+    --btn-bg-color-dark: #333333; /* Background tombol gelap */
+    --btn-text-color: #ffffff; /* Teks tombol */
+    --btn-hover-color: #45a049; /* Hover warna tombol */
+    --link-color-light: #ff9800; /* Warna link terang */
+    --link-color-dark: #ffb84d; /* Warna link gelap */
+    --hover-color: #ffa726; /* Hover link color */
+    --header-bg-color-light: #ffffff; /* Background header terang */
+    --header-bg-color-dark: #1e1e1e; /* Background header gelap */
+}
+
+/* Mode Gelap */
+.dark-mode {
+    --bg-light: #1d1d1d;
+    --gradient-light: linear-gradient(135deg, #333333, #121212);
+    --text-color-light: #f4f4f4;
+    --btn-bg-color-light: #4CAF50;
+    --btn-bg-color-dark: #1e1e1e;
+    --btn-hover-color: #555555;
+    --link-color-light: #ffb84d;
+    --link-color-dark: #ff9800;
+    --header-bg-color-light: #121212;
+    --header-bg-color-dark: #333333;
+}
+
+/* Aturan Body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: var(--gradient-light);
+    color: var(--text-color-light);
+    transition: background 0.5s ease, color 0.3s ease;
+}
+
+header {
+    background-color: var(--header-bg-color-light); /* Header Background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 2rem;
+    transition: background-color 0.3s ease;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--text-color-light);
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: var(--link-color-light); /* Efek hover pada menu */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 2rem;
+    transition: background 0.5s ease;
+}
+
+.hero-content {
+    max-width: 700px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Tombol More About Me */
+.more-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    /* background: var(--btn-bg-color-light); */
+    color: var(--btn-text-color);
+    border-color: darkorange;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.more-btn:hover {
+    background: var(--btn-hover-color);
+    transform: scale(1.05);
+}
+
+/* Gallery Section */
+.seaworld {
+    background: var(--gradient-light);
+    color: var(--text-color-light);
+    padding: 4rem 2rem;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.seaworld-header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: var(--text-color-light);
+}
+
+.seaworld-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.gallery-item {
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    padding: 1.5rem;
+    max-width: 320px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.gallery-item p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background: var(--hover-color);
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Pengaturan Mode Gelap */
+.dark-mode body {
+    background: var(--gradient-dark);
+    color: var(--text-color-dark);
+}
+
+.dark-mode header {
+    background-color: var(--header-bg-color-dark);
+}
+
+.dark-mode header ul li a {
+    color: var(--text-color-dark);
+}
+
+.dark-mode header ul li a:hover {
+    color: var(--link-color-dark);
+}
+
+.dark-mode .hero {
+    background: url('path-to-your-dark-mode-image.jpg') no-repeat center center/cover;
+}
+
+.dark-mode .hero-content h1, 
+.dark-mode .hero-content h2, 
+.dark-mode .hero-content p {
+    color: var(--text-color-dark);
+}
+
+.dark-mode .more-btn {
+    background: var(--btn-bg-color-dark);
+}
+
+/* Transisi Mode Gelap dan Terang */
+.dark-mode button {
+    background-color: var(--btn-bg-color-dark);
+    color: var(--btn-text-color);
+}
+
+.dark-mode button:hover {
+    background-color: var(--btn-hover-color);
+}
+
+.dark-mode a {
+    color: var(--link-color-dark);
+}
+
+.dark-mode a:hover {
+    color: var(--hover-color);
+}
+
+/* Animasi Scroll */
+@keyframes scrollAnimation {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animasi untuk Hero dan elemen lain */
+.hero-content h1, .hero-content h2, .social-icons img {
+    animation: scrollAnimation 1s ease-out;
+}
+
+/* Navigasi */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efek hover */
+nav ul li a:hover {
+    background-color: #ff9800; /* Background saat hover */
+    color: white; /* Warna teks saat hover */
+}
+
+/* Background aktif untuk menu yang dipilih */
+nav ul li a.active {
+    background-color: #333333; /* Background untuk menu aktif */
+    color: white; /* Warna teks menu aktif */
+}
+/* Variabel untuk tema */
+:root {
+    --bg-color: #121212; /* Background fallback */
+    --text-color: #ffffff;
+    --btn-bg-color: #4CAF50;
+    --btn-hover-color: #45a049;
+}
+
+/* Global styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('assets/images/Desain tanpa judul.png') no-repeat center center/cover; /* Wallpaper */
+    color: var(--text-color);
+    transition: background 0.5s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header ul li a:hover {
+    background-color: var(--btn-hover-color);
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: var(--text-color);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.more-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: var(--btn-bg-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.more-btn:hover {
+    background-color: var(--btn-hover-color);
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--text-color);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e4405f; /* Instagram color */
+    transform: scale(1.2);
+} */

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mustafidz Faturachman</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Variabel tema */
+        :root {
+            --text-color: #ffffff; /* Warna teks default */
+            --bg-overlay: rgba(0, 0, 0, 0.5); /* Overlay latar belakang */
+            --bg-button: #ff9800; /* Warna tombol */
+            --bg-hover: #e68900; /* Warna tombol saat hover */
+            --bg-dark: #121212; /* Warna latar belakang mode gelap */
+            --text-dark: #cfcfcf; /* Warna teks di mode gelap */
+        }
+
+        /* Efek transisi untuk mode gelap */
+        * {
+            transition: all 0,01s ease-in-out;
+        }
+
+        /* Latar belakang dan warna teks */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-dark);
+        }
+
+        /* Section latar belakang */
+        #home, #seaworld {
+            background: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+                        url('Desain tanpa judul.png') no-repeat center center/cover;
+            color: var(--text-color);
+        }
+
+        #home {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        #seaworld {
+            padding: 2rem;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: var(--bg-button);
+        }
+
+        /* Tombol */
+        button {
+            background-color: var(--bg-button);
+            color: var(--text-color);
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--bg-hover);
+            transform: scale(1.05);
+        }
+
+        /* Konten Hero Section */
+        .hero-content h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero-content h2 {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            margin: 0 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+        }
+
+        /* Gallery */
+        .seaworld-gallery {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem;
+
+        }
+
+        .seaworld-gallery img:hover{
+            transform: scale(1.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .gallery-item p {
+            text-align: center;
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: var(--text-color);
+            margin-top: 2rem;
+        }
+
+        /* Mode Gelap */
+        .dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        .dark-mode nav {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .dark-mode #home, 
+        .dark-mode #seaworld {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('Desain tanpa judul.png') no-repeat center center/cover;
+        }
+        section#about, section#contact {
+    padding: 2rem;
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    text-align: center;
+}
+
+
+
+section#about img, section#contact img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+section#about p, section#contact p, section#contact ul {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+section#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+section#contact li {
+    margin: 0.5rem 0;
+}
+
+        /* Tambahkan gaya CSS untuk halaman About dan Contact */
+        section {
+            padding: 20px;
+        }
+        .about, .contact {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact ul {
+            list-style: none;
+            padding: 0;
+        }
+        .contact ul li {
+            margin: 10px 0;
+        }
+        <style>
+    .about {
+        background-image: url('../asset/background-about-contact.png');
+        background-color: black; /* Warna latar belakang hitam */
+        padding: 10px;
+        border-radius: 10px;
+        color: rgb(0, 0, 0); /* Pastikan teks terlihat jelas */
+    box-shadow: 0 4px 8px rgba(21, 0, 59, 0.1);
+    }
+
+    .contact {
+        background-image: url('asset/background-about-contact.png'); /* Path ke gambar latar belakang */
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="pemesanan/index.html">Pemesanan</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="darkModeToggle">🌙 Mode Gelap</button>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hello, it's Me</h1>
+                <h2>Mustafidz Faturachman</h2>
+                <p>I am a student majoring in informatics</p>
+                <div class="social-icons">
+                    <a href="#"><img src="asset/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="asset/twitch-icon.png" alt="Twitch"></a>
+                    <a href="#"><img src="asset/youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="asset/instagram-icon.png" alt="Instagram"></a>
+                </div>
+                <button class="more-btn">More About Me</button>
+            </div>
+            <div class="hero-image">
+                <img src="asset/your-image.png" alt="Mustafidz Faturachman">
+            </div>
+        </section>
+
+        <section id="seaworld" class="seaworld">
+            <h1>SEA WORLD</h1>
+            <p>A complete area to provide entertainment and education, especially the marine world</p>
+            <div class="seaworld-gallery">
+                <div class="gallery-item">
+                    <a href="pintumasuk/pintumasuk.html"><img src="asset/seaworld-entrance.png" alt="Pintu Masuk Sea World"></a>
+                    <p>PINTU MASUK SEA WORLD</p>
+                </div>
+                <div class="gallery-item">
+                    <a href="antasenatunnel/antasenatunnel.html"><img src="asset/seaworld-tunnel.png" alt="antasenatunnel"></a>
+                    <p>ANTASENA TUNNEL</p>
+                </div>
+                <div class="gallery-item">
+                    <a href="uburubur/uburubur.html"><img src="asset/seaworld-jellyfish.jpg" alt="Ubur-ubur"></a>
+                    <p>UBUR UBUR</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Sea World</h2>
+            <p>Sea World is a unique destination offering entertainment and education about marine life. From fascinating jellyfish to an incredible Antasena Tunnel, it provides an immersive experience for all ages. Our mission is to inspire love and care for the ocean and its inhabitants.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need more information, feel free to reach out to us through the following:</p>
+            <ul>
+                <li>Email: <a href="mailto:genja2854@gmail.com">genja2854@gmail.com</a></li>
+                <li>Phone: +62 853 143 972 71</li>
+                <li>Address: Jl. Marine World, Jakarta, Indonesia</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Mustafidz Faturachman. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            const isDarkMode = body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+        });
+    </script>
+</body>
+</html>
