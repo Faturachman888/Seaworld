@@ -1,8 +1,8 @@
 <?php
 $server = "localhost";
-$user = "perewah_wisata";
-$password = "ardimardiana2024";
-$nama_database = "perewah_wisata";
+$user = "root";
+$password = "";
+$nama_database = "portfolio";
 
 $db = mysqli_connect($server, $user, $password, $nama_database);
 

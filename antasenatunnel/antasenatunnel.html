@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antesanna Tunnel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #001f3f;
+            color: white;
+            overflow: hidden;
+        }
+
+        .tunnel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #001f3f, #004080);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .tunnel::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://example.com/underwater-tunnel.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        .tunnel-content {
+            text-align: center;
+            z-index: 1;
+        }
+
+        .tunnel-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .tunnel-content p {
+            font-size: 1.2em;
+        }
+
+        .fish {
+            position: absolute;
+            width: 100px;
+            animation: swim 10s infinite linear;
+        }
+
+        .fish:nth-child(1) {
+            top: 20%;
+            left: -150px;
+        }
+
+        .fish:nth-child(2) {
+            top: 50%;
+            left: -200px;
+            animation-duration: 12s;
+        }
+
+        .fish:nth-child(3) {
+            top: 80%;
+            left: -250px;
+            animation-duration: 8s;
+        }
+
+        @keyframes swim {
+            from {
+                transform: translateX(-150px);
+            }
+            to {
+                transform: translateX(100vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tunnel">
+        <div class="tunnel-content">
+            <h1>Welcome to Antesanna Tunnel</h1>
+            <p>Walk through an underwater world and experience the magic of the ocean.</p>
+        </div>
+
+        <!-- Fish Animations -->
+        <img src="https://example.com/fish1.png" alt="Fish" class="fish">
+        <img src="https://example.com/fish2.png" alt="Fish" class="fish">
+        <img src="https://example.com/fish3.png" alt="Fish" class="fish">
+    </div>
+</body>
+</html>
