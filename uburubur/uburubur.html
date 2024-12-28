@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeaWorld Jellyfish</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d1b2a;
+            color: white;
+            overflow: hidden;
+        }
+
+        .jellyfish-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, #0d1b2a, #001524);
+        }
+
+        .jellyfish-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .jellyfish-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .jellyfish-container {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .jellyfish {
+            position: absolute;
+            width: 80px;
+            opacity: 0.8;
+            animation: float 6s infinite ease-in-out, drift 10s infinite linear;
+        }
+
+        .jellyfish:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-duration: 7s, 12s;
+        }
+
+        .jellyfish:nth-child(2) {
+            top: 50%;
+            left: 30%;
+            animation-duration: 6s, 10s;
+        }
+
+        .jellyfish:nth-child(3) {
+            top: 30%;
+            left: 60%;
+            animation-duration: 8s, 14s;
+        }
+
+        .jellyfish:nth-child(4) {
+            top: 70%;
+            left: 80%;
+            animation-duration: 5s, 9s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes drift {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="jellyfish-section">
+        <h1>Jellyfish: The Floating Wonders</h1>
+        <p>Experience the enchanting movement of jellyfish at SeaWorld. These magnificent creatures showcase their translucent beauty and graceful motion, creating a mesmerizing underwater world. Learn about their fascinating lives and their role in the ocean ecosystem.</p>
+    </div>
+
+    <div class="jellyfish-container">
+        <img src="https://example.com/jellyfish1.png" alt="Jellyfish" class="jellyfish">
+        <img src="https://example.com/jellyfish2.png" alt="Jellyfish" class="jellyfish">
+        <img src="https://example.com/jellyfish3.png" alt="Jellyfish" class="jellyfish">
+        <img src="https://example.com/jellyfish4.png" alt="Jellyfish" class="jellyfish">
+    </div>
+</body>
+</html>

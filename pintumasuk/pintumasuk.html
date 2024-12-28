@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SeaWorld Entrance</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+            overflow: hidden;
+        }
+        
+        .entrance {
+            text-align: center;
+            padding: 50px 20px;
+            background: url('https://example.com/seaworld-background.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+
+        .entrance h1 {
+            font-size: 4em;
+            text-shadow: 2px 2px 8px #000;
+            margin-bottom: 10px;
+        }
+
+        .entrance p {
+            font-size: 1.5em;
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        .entrance .photo-area {
+            margin-top: 30px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #1E90FF;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .button:hover {
+            background-color: #4682B4;
+            transform: scale(1.1);
+        }
+
+        .fish-animation {
+            position: absolute;
+            animation: swim 10s infinite linear;
+        }
+
+        @keyframes swim {
+            from {
+                transform: translateX(-150px) translateY(0px);
+            }
+            to {
+                transform: translateX(100vw) translateY(30px);
+            }
+        }
+
+        .info-section {
+            padding: 20px;
+            text-align: center;
+            background: #1E90FF;
+            color: white;
+        }
+
+        .info-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .info-section p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    test
+    <div class="entrance">
+        <h1>Welcome to SeaWorld</h1>
+        <p>Experience the wonders of the deep sea!</p>
+        <div class="photo-area">
+            <button class="button">Take a Photo</button>
+        </div>
+    </div>
+    
+    <!-- Fish Animation -->
+    <img src="https://example.com/fish.png" alt="Swimming Fish" class="fish-animation" style="top: 40%; left: -150px; width: 100px;">
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <h2>Discover the Magic of the Ocean</h2>
+        <p>Join us to explore marine life, breathtaking shows, and unforgettable moments.</p>
+    </div>
 </body>
 </html>
